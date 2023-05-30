@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<People>
+    <person>
+        <age>28</age>
+        <name>김일빈</name>
+        <gender>Male</gender>
+        <role>Java Developer</role>
+    </person>
+    <person>
+        <age>29</age>
+        <name>김이빈</name>
+        <gender>Male</gender>
+        <role>Designer</role>
+    </person>
+    <person>
+        <age>30</age>
+        <name>김삼빈</name>
+        <gender>Female</gender>
+        <role>FrontEnd</role>
+    </person>
+    <person>
+        <age>31</age>
+        <name>김사빈</name>
+        <gender>Female</gender>
+        <role>MD</role>
+    </person>
+</People>
