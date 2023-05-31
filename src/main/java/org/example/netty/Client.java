@@ -55,19 +55,19 @@ public class Client {
         ChannelFuture future;
 
 //        while(true) {
-            System.out.println(message);
+            System.out.println("==============1================");
             // 사용자 입력
 //            message = scanner.nextLine();
 //            message = str;
             // Server로 전송
             future = serverChannel.writeAndFlush(message.concat("\n"));
-//            future = serverChannel.writeAndFlush(str);
+//            future = serverChannel.writeAndFlush(message);
 
             if("quit".equals(message)){
                 serverChannel.closeFuture().sync();
 //                break;
-            }
-//        }
+//            }
+        }
 
         // 종료되기 전 모든 메시지가 flush 될때까지 기다림
         if(future != null){
@@ -82,7 +82,7 @@ public class Client {
 
     public static void main(String[] args) throws Exception {
 
-//        //IP,포트설정
+        //IP,포트설정
 //        Client client = new Client("127.0.0.1", SERVER_PORT);
 //
 //        try {

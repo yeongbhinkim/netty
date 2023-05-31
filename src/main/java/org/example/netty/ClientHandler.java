@@ -2,7 +2,6 @@ package org.example.netty;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import org.example.rbpClient.service.RbpClientService;
 
 /**
  * 서버로 문자열을 던지면 서버는 문자를 좀 더 붙여서 클라이언트로 던져준다.
@@ -25,6 +24,13 @@ public class ClientHandler extends SimpleChannelInboundHandler {
         message = (String)msg;
         System.out.println(message);
 
+        RbpClientService rbpClientService = null;
+        try {
+            rbpClientService = new RbpClientService();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        rbpClientService.receiver(message);
 
     }
 
